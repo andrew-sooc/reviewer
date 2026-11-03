@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quest | Grade 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">SCIENCE<span>QUEST</span> ⚛</div>
+    <div class="topscore">⭐ <span id="headerScore">0</span> XP</div>
+</header>
+
+<section class="hero">
+    <div class="eyebrow">GRADE 10 • SECOND QUARTER</div>
+
+    <h1>Think. Explore.<br>
+        <em>Master Science.</em>
+    </h1>
+
+    <p>
+        Your interactive reviewer for Impulse and Momentum,
+        Electricity, and Electromagnetism.
+        Learn concepts, solve problems, and challenge yourself!
+    </p>
+
+    <div class="stats">
+        <div class="stat"><b>02</b>Major Lessons</div>
+        <div class="stat"><b>12</b>Flashcards</div>
+        <div class="stat"><b>15</b>Quiz Questions</div>
+        <div class="stat"><b id="xpStat">0 XP</b>Your Score</div>
+    </div>
+</section>
+
+<div class="layout">
+
+<nav>
+    <button class="active" data-page="learn">📖 Study Lessons</button>
+    <button data-page="flash">🃏 Flashcards</button>
+    <button data-page="calculator">🧮 Formula Lab</button>
+    <button data-page="quiz">🎯 Quiz Challenge</button>
+    <button data-page="progress">🏆 My Progress</button>
+</nav>
+
+<main>
+
+<!-- STUDY LESSONS -->
+<section id="learn" class="section active">
+
+<h2>📖 Study Lessons</h2>
+<p class="sub">Understand the concepts before taking the challenge.</p>
+
+<div class="card">
+<span class="tag">LESSON 01 • MECHANICS</span>
+<h3>🚀 Impulse and Momentum</h3>
+
+<p>
+Momentum describes how much motion an object has.
+It depends on its mass and velocity.
+</p>
+
+<div class="topic">
+<h4>Linear Momentum</h4>
+<div class="formula">p = mv</div>
+<p>
+p = momentum (kg·m/s)<br>
+m = mass (kg)<br>
+v = velocity (m/s)
+</p>
+<p>Example: A 2 kg ball moving at 3 m/s has a momentum of 6 kg·m/s.</p>
+</div>
+
+<div class="topic">
+<h4>💥 Impulse</h4>
+<div class="formula">I = FΔt = Δp</div>
+<p>
+I = impulse (N·s)<br>
+F = net force (N)<br>
+Δt = time interval (s)
+</p>
+<p>Impulse is equal to the change in momentum.</p>
+</div>
+
+<div class="note">
+Remember: Impulse-Momentum Theorem:
+FΔt = mvf - mvi
+</div>
+</div>
+
+<div class="card">
+<h3>⚖️ Conservation of Momentum</h3>
+
+<p>
+In an isolated system, total momentum before
+an interaction equals total momentum after it.
+</p>
+
+<div class="formula">p initial = p final</div>
+
+<p>
+For two objects:
+</p>
+
+<div class="formula">
+m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'
+</div>
+
+<div class="note">
+Example: Two skaters push away from each other.
+Their individual momenta change, but total momentum
+of the system remains constant if external forces are negligible.
+</div>
+</div>
+
+<div class="card">
+<h3>💫 Types of Collisions</h3>
+
+<div class="topic">
+<h4>Elastic Collision</h4>
+<p>
+Both momentum and total kinetic energy are conserved.
+</p>
+<p>Example: An ideal collision between billiard balls.</p>
+</div>
+
+<div class="topic">
+<h4>Inelastic Collision</h4>
+<p>
+Momentum is conserved, but kinetic energy is not.
+Some energy changes into sound, heat, or deformation.
+</p>
+<p>Example: Two objects sticking together after collision.</p>
+</div>
+</div>
+
+<div class="card">
+<span class="tag">LESSON 02 • ELECTRICITY & ELECTROMAGNETISM</span>
+
+<h3>⚡ Electromagnetic Induction</h3>
+
+<p>
+Electromagnetic induction happens when a changing
+magnetic field through a conductor or coil produces
+an induced voltage.
+</p>
+
+<div class="note">
+Key idea: A changing magnetic field can produce electricity.
+</div>
+</div>
+
+<div class="card">
+<h3>🔄 Electric Motors vs. Generators</h3>
+
+<div class="topic">
+<h4>Electric Motor</h4>
+<p>Converts electrical energy into mechanical energy.</p>
+</div>
+
+<div class="topic">
+<h4>Generator</h4>
+<p>Converts mechanical energy into electrical energy.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>🏭 Power Generation and Distribution</h3>
+
+<div class="topic">
+<h4>1. Generation</h4>
+<p>Power plants use generators to produce electricity.</p>
+</div>
+
+<div class="topic">
+<h4>2. Step-up Transformer</h4>
+<p>Increases voltage for efficient long-distance transmission.</p>
+</div>
+
+<div class="topic">
+<h4>3. Transmission Lines</h4>
+<p>Carry high-voltage electricity over long distances.</p>
+</div>
+
+<div class="topic">
+<h4>4. Step-down Transformer</h4>
+<p>Lowers voltage before electricity reaches consumers.</p>
+</div>
+
+<div class="note">
+Safety reminder: Never touch power lines or electrical equipment.
+</div>
+</div>
+
+</section>
+
+<!-- FLASHCARDS -->
+<section id="flash" class="section">
+
+<h2>🃏 Flashcard Arena</h2>
+<p class="sub">Click the card to reveal the answer.</p>
+
+<div class="progress">
+<span id="flashProgress"></span>
+</div>
+
+<p id="flashCount">Card 1 of 12</p>
+
+<div class="flashcard" id="flashcard">
+    <div>
+        <div id="flashLabel">QUESTION</div>
+        <div class="big" id="flashText">
+            What is linear momentum?
+        </div>
+        <div id="flashHint">Click to reveal the answer.</div>
+    </div>
+</div>
+
+<div class="row">
+    <button class="btn secondary" id="prevCard">Previous</button>
+    <button class="btn" id="nextCard">Next Card</button>
+</div>
+
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="section">
+
+<h2>🧮 Formula Lab</h2>
+<p class="sub">Practice solving physics problems.</p>
+
+<div class="card">
+
+<label>SELECT FORMULA</label>
+
+<select id="calcType">
+<option value="momentum">Momentum: p = mv</option>
+<option value="impulse">Impulse: I = F × Δt</option>
+<option value="change">Change in Momentum</option>
+</select>
+
+<div id="fields"></div>
+
+<button class="btn" id="calculate">Calculate Result ⚡</button>
+
+<div id="calcResult"></div>
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="section">
+
+<h2>🎯 Quiz Challenge</h2>
+<p class="sub">15 questions. Earn 10 XP for every correct answer.</p>
+
+<div class="card">
+
+<div id="quizNumber">QUESTION 1 / 15</div>
+
+<div class="progress">
+<span id="quizProgress"></span>
+</div>
+
+<h3 id="questionText"></h3>
+
+<div class="answers" id="answers"></div>
+
+<div id="feedback" class="feedback"></div>
+
+<button class="btn" id="nextQuestion" disabled>
+Next Question
+</button>
+
+</div>
+
+</section>
+
+<!-- PROGRESS -->
+<section id="progress" class="section">
+
+<h2>🏆 Your Progress</h2>
+
+<div class="card">
+<h3>Total Experience</h3>
+<div class="formula" id="totalXP">0 XP</div>
+</div>
+
+<div class="card">
+<h3>Quiz Accuracy</h3>
+<div class="formula" id="accuracy">0%</div>
+<p id="accuracyText">Answer questions to build your accuracy.</p>
+</div>
+
+<div class="card">
+<h3>Your Rank</h3>
+<div class="formula" id="rank">Science Rookie</div>
+<p id="rankMessage"></p>
+<div class="progress">
+<span id="rankProgress"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>📌 Study Checklist</h3>
+<div id="checklist"></div>
+</div>
+
+<button class="btn secondary" id="reset">
+Reset Progress
+</button>
+
+</section>
+
+</main>
+</div>
+
+<footer>
+SCIENCE QUEST • GRADE 10 SCIENCE
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
